@@ -32,25 +32,3 @@ function updateTime(t) {
     if (t < 10) return "0" + t;
     else return t;
 }
-
-
-/*date();
-function date(){
-    var date = new Date();
-    var day = date.getDate();
-    var month = ["January",
-                  "February",
-                  "March",
-                  "April",
-                  "May",
-                  "June",
-                  "July",
-                  "August",
-                  "September",
-                  "October",
-                  "November",
-                  "December"];
-    var year = date.getFullYear();
-    
-    document.getElementById("container-2").innerHTML = day + " - " + month[date.getMonth()] + " - " +  year;
-}*/
