@@ -1,40 +1,230 @@
-@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 
-body{
-    background-color:#070808 !important;
-    color:#19d619 !important;
-    font-family: 'Orbitron', sans-serif !important;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#container-1{
-    border: 2px solid #343a40;
-    margin: 100px auto;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 40px;
-    width: 75%;
-    font-size: 7em;
-    font-weight: 900;
+body {
+  font-family: "Graduate", cursive;
+  background-color: rgb(29, 29, 29);
+  height: 100vh;
+  overflow: hidden;
 }
 
-#container-2{
-    border: 2px solid #343a40;
-    margin: 100px auto;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 3px;
-    width: 95%;
-    font-size: 6em;
-    font-weight: 900;
+.clock{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
+.animate1{
+  background: linear-gradient(to right, #F12711, #f58319);
+  height: 25vw;
+  width: 25vw;
+  position: absolute;
+  left: 3vw;
+  top: 10vh;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px rgb(255, 94, 0);
+  animation: orangeBox 20s infinite;
+}
+
+.animate2{
+  background: linear-gradient(to right, #83EAF1, #63A4FF);
+  height: 25vw;
+  width: 25vw;
+  position: absolute;
+  right: 3vw;
+  bottom: 0vh;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px rgb(0, 183, 255);
+  animation: blueBox 20s infinite;
+}
+
+@keyframes orangeBox {
+ 0%{
+   top: 10vh;
+  }
+  50%{
+    top: 60vh;
+    transform: rotateZ(90deg);
+ }
+}
+
+@keyframes blueBox {
+  0%{
+    bottom: 0vh;
+  }
+  50%{
+    bottom:60vh;
+    transform: rotateZ(90deg);
+  }
+ }
+
+.container{
+  display: flex;
+  background: rgba(59, 59, 59, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 2vh 2vw;
+  margin: 1vh;
+}
+
+.hours, .min, .sec {
+  padding: 2vh;
+  width: 25vw;
+  margin: 0.5vw;
+  background: rgba(59, 59, 59, 0.4);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 6rem;
+  text-align: center;
+}
+
+.sec{
+  color: #f58319 !important;
+}
+
+#dot{
+  color: #fff;
+  font-size: 6rem;
+  animation: dot 1s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes dot {
+  0%{
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+  50%{
+    opacity: 0;
+  }
+}
+
+.date{
+  padding: 2vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 1.6rem;
+  z-index: 9999;
+}
+
+#day{
+  margin: 1vh;
+}
+
+#fullDate{
+  margin: 1vh;
 }
 
 
+footer{
+  background: rgba(59, 59, 59, 0.4);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  text-align: center;
+  padding: 1vh;
+  position:absolute;
+  bottom: 0px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 10vh;
+}
+
+footer a{
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover{
+  color: #f58319;
+}
+
+.fa-heart{
+  color: red;
+}
 
 
+@media only all and (max-width: 1200px) {
+    .animate1{
+      width: 32vw;
+      height: 32vw;
+    }
 
+    .animate2{
+      width: 32vw;
+      height: 32vw;
+    } 
+}
 
+@media only all and (max-width: 850px) {
+  .animate1{
+    width: 36vw;
+    height: 36vw;
+  }
 
+  .animate2{
+    width: 36vw;
+    height: 36vw;
+  } 
+
+  .hours, .min, .sec{
+    font-size: 5.2rem;
+  }
+
+  #dot{
+    font-size: 5.2rem;
+  }
+}
+
+@media only all and (max-width: 600px) {
+  .animate1{
+    width: 38vw;
+    height: 38vw;
+  }
+
+  .animate2{
+    width: 38vw;
+    height: 38vw;
+  } 
+
+  .hours, .min, .sec{
+    font-size: 4rem;
+  }
+
+  #dot{
+    font-size: 4rem;
+  }
+}
+
+@media only all and (max-width: 450px) {
+  .animate1{
+    width: 40vw;
+    height: 40vw;
+  }
+
+  .animate2{
+    width: 40vw;
+    height: 40vw;
+  } 
+
+  .hours, .min, .sec{
+    font-size: 3.2rem;
+  }
+
+  #dot{
+    font-size: 3.2rem;
+  }
+}

@@ -1,65 +1,62 @@
-Time();
-function Time() {
-    var date = new Date();
-    var hour = date.getHours();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    hour = updateTime(hour);
-    min = updateTime(min);
-    sec = updateTime(sec);
-    var $$time = setTimeout(Time, 1000);
-    document.getElementById("container-1").innerHTML = hour + " : " + min + " : " + sec;
+const hoursBox = document.querySelector(".hours");
+const minBox = document.querySelector(".min");
+const secBox = document.querySelector(".sec");
+const dayBox = document.querySelector("#day");
+const fullDate = document.querySelector("#fullDate");
 
+        setInterval(async () => {
+                const date = new Date();
+                let hours = date.getHours();
+                let min = date.getMinutes();
+                let sec = date.getSeconds();
+                let day = date.getDay();
+                let year = date.getFullYear();
+                let month = date.getMonth();
+                let todayDate = date.getDate();
+                let daysList = [
+                        'Sunday',
+                        'Monday',
+                        'Tuesday',
+                        'Wednesday',
+                        'Thursday',
+                        'Friday',
+                        'Saturday'
+                      ];
+                let monthsList = [
+                        "Jan",
+                        "Feb", 
+                        "Mar", 
+                        "Apr", 
+                        "May", 
+                        "Jun", 
+                        "Jul",
+                        "Aug",
+                        "Sep", 
+                        "Oct", 
+                        "Nov", 
+                        "Dec"
+                    ];
+                
+        
+        
+        
+                if(todayDate < 10){
+                        todayDate = `0${todayDate}`
+                }
+                if(hours < 10){
+                        hours = `0${hours}`
+                }
+                if(min < 10){
+                        min = `0${min}`
+                }
+                if(sec < 10){
+                        sec = `0${sec}`;
+                }
+        
+                hoursBox.innerHTML = hours;
+                minBox.innerHTML = min;
+                secBox.innerHTML = sec;
+                dayBox.innerHTML = daysList[day];
+                fullDate.innerHTML = `${todayDate} ${monthsList[month]} ${year}`; 
+        }, 1000);
 
-    
-    var day = date.getDate();
-    var month = ["January",
-                  "February",
-                  "March",
-                  "April",
-                  "May",
-                  "June",
-                  "July",
-                  "August",
-                  "September",
-                  "October",
-                  "November",
-                  "December"];
-    var year = date.getFullYear();
-    day = updateTime(day);
-    month = updateTime(month);
-    year = updateTime(year);
-    
-    document.getElementById("container-2").innerHTML = day + " - " + month[date.getMonth()] + " - " +  year ;
-}
-
-
-function updateTime(t) {
-    if (t < 10) {
-        return "0" + t;
-    } else {
-        return t;
-    }
-}
-
-
-/*date();
-function date(){
-    var date = new Date();
-    var day = date.getDate();
-    var month = ["January",
-                  "February",
-                  "March",
-                  "April",
-                  "May",
-                  "June",
-                  "July",
-                  "August",
-                  "September",
-                  "October",
-                  "November",
-                  "December"];
-    var year = date.getFullYear();
-    
-    document.getElementById("container-2").innerHTML = day + " - " + month[date.getMonth()] + " - " +  year;
-}*/

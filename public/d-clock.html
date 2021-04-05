@@ -6,18 +6,37 @@
         <meta name="keywords" content="HTML, css, js, clock, time, month, year, digital clock, watch, seconds, date, minutes, hours">
         <meta name="author" content="Sagar Sharma">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Digital Clock</title>
+        <link rel="shortcut icon" href="./images/logo.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
         <link rel="stylesheet" href="css/d-clock.css">
+        <title>Digital Clock</title>
     </head>
 <body>
-    <div id="container-1">
 
-        
+    <div class="clock">
+        <div class="animate1"></div>
+        <div class="animate2"></div>
+        <div class="container">
+            <div class="hours"></div>
+            <div id="dot"><p>:</p></div>
+            <div class="min"></div>
+            <div id="dot"><p>:</p></div>
+            <div class="sec"></div>
+        </div>
+
+            <div class="date">
+                <div id="day"></div>
+                <div id="fullDate"></div>
+            </div>
+
     </div>
-    <div id="container-2">
+
+    <footer>
+        <a href="https://github.com/Sagar-Sharma-7" target="_blank" title="github">Contribute to my  <i class="fab fa-github"></i></a>
+
+        <p>Made with <i class="fas fa-heart" title="love"></i> by Sagar Sharma</p>
         
-    </div>
+      </footer>
 
     <script src="js/d-clock.js"></script>
 </body>

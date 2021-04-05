@@ -1,10 +1,14 @@
-## Hi, I'm Sagar Sharma
-## This is my new project called **_Digital Clock_**. 
+## Wanna see the new UI of Digital Clock 
+### Click on the link below
+### [Digital Clock]()
+
 
 <br>
 
 <p align="center">
-  <img src="public/images/result.png" width="" title="result">
+  <img src="public/images/result1.png"  title="result">
+  <br>
+  <img src="public/images/result2.png"  title="result">
 </p>
 
 <br>
