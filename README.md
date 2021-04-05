@@ -1,6 +1,6 @@
 ## Wanna see the new UI of Digital Clock 
 ### Click on the link below
-### [Digital Clock]()
+### [Digital Clock](https://sagar-sharma-7.github.io/Digital-Clock/public/d-clock.html)
 
 
 <br>
