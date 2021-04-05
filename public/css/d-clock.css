@@ -9,7 +9,6 @@ body {
   font-family: "Graduate", cursive;
   background-color: rgb(29, 29, 29);
   height: 100vh;
-  overflow: hidden;
 }
 
 .clock{
@@ -27,7 +26,7 @@ body {
   width: 25vw;
   position: absolute;
   left: 3vw;
-  top: 10vh;
+  bottom: 60vh;
   border-radius: 20px;
   box-shadow: 2px 2px 20px rgb(255, 94, 0);
   animation: orangeBox 20s infinite;
@@ -47,11 +46,11 @@ body {
 
 @keyframes orangeBox {
  0%{
-   top: 10vh;
+   bottom: 60vh;
   }
-  50%{
-    top: 60vh;
-    transform: rotateZ(90deg);
+  70%{
+   bottom: 0vh;
+   border-radius: 50%;
  }
 }
 
@@ -59,9 +58,9 @@ body {
   0%{
     bottom: 0vh;
   }
-  50%{
-    bottom:60vh;
-    transform: rotateZ(90deg);
+  70%{
+    bottom: 60vh;
+    border-radius: 50%;
   }
  }
 
@@ -71,6 +70,7 @@ body {
   backdrop-filter: blur(10px);
   padding: 2vh 2vw;
   margin: 1vh;
+  z-index: 9999;
 }
 
 .hours, .min, .sec {
@@ -132,7 +132,7 @@ footer{
   backdrop-filter: blur(10px);
   color: #fff;
   text-align: center;
-  padding: 1vh;
+  padding: 3vw;
   position:absolute;
   bottom: 0px;
   width: 100vw;
@@ -141,6 +141,7 @@ footer{
   align-items: center;
   flex-direction: column;
   height: 10vh;
+  z-index: 9999;
 }
 
 footer a{
@@ -156,6 +157,22 @@ footer a:hover{
   color: red;
 }
 
+@media only all and  (max-height: 380px){
+  .date{
+    font-size: 1rem;
+  }
+  .container{
+    padding: 1vh 1vw !important;
+  }
+
+  .hours, .min, .sec{
+    padding: 0vh;
+  }
+  footer{
+    display: none;
+  }
+
+}
 
 @media only all and (max-width: 1200px) {
     .animate1{
@@ -187,6 +204,10 @@ footer a:hover{
   #dot{
     font-size: 5.2rem;
   }
+
+  footer{
+    font-size: 0.8rem;
+  }
 }
 
 @media only all and (max-width: 600px) {
@@ -206,6 +227,10 @@ footer a:hover{
 
   #dot{
     font-size: 4rem;
+  }
+
+  footer{
+    font-size: 0.7rem;
   }
 }
 
